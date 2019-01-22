@@ -1,0 +1,26 @@
+{
+  "name": "two-news",
+  "version": "1.0.0",
+  "description": "two",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TRYMAKEandroid/two-news.git"
+  },
+  "keywords": [
+    "two",
+    "baitu"
+  ],
+  "author": "Zengyiting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TRYMAKEandroid/two-news/issues"
+  },
+  "homepage": "https://github.com/TRYMAKEandroid/two-news#readme",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
+}
