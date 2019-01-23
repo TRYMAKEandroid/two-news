@@ -1,31 +1,29 @@
 <template>  
         <div class='login-app'>
             <div class='LAG'>
-                <div class='active'>登陆</div>
-                <div>注册</div>
+                <div  @click='clickLAG(1)' :class="{'active':1===isActive}">注册</div>
+                <div  @click='clickLAG(2)' :class="{'active':2===isActive}">登陆</div>
             </div>
             <div class='login active'>
             <form>
             <ul>
-                <li><div>用户：</div><div><input type="text" name='uname' id='uname' v-model='uname'></div><span :class='unameA'>{{unameI}}</span></li>
-                <li><div>密码：</div><div><input type="password" name='pwd' id='pwd' v-model='pwd'></div><span :class='pwdA'>{{pwdI}}</span></li>
-                <li><div>确认密码：</div><div><input type="password" name='opwd' id='opwd' v-model='opwd'></div><span>{{opwdI}}</span></li>
+                <li><div>用户：</div><div><input type="text" name='uname' id='uname' v-model='uname'  @blur.prevent="isregister"></div><span :class='unameA' v-if='isActive===1'>{{unameI}}</span></li>
+                <li><div>密码：</div><div><input type="password" name='pwd' id='pwd' v-model='pwd'></div><span :class='pwdA' v-if='isActive===1'>{{pwdI}}</span></li>
+                <li v-if='isActive===1'><div>确认密码：</div><div><input type="password" name='opwd' id='opwd' v-model='opwd'></div><span>{{opwdI}}</span></li>
             </ul>
-            <button @click.prevent="login">登陆</button>
+
+            <button @click.prevent="register" v-if='isActive===1'>注册</button>
+            <button @click.prevent="login" v-if='isActive===2'>登陆</button>
+
             </form>
             </div>
 
 
 
-            <div class='register'>
-            <form>
-            <ul>                                                                
-                <li><div>用户：</div><div><input type="text" name='uname' id='uname'></div></li>
-                <li><div>密码：</div><div><input type="text" name='pwd' id='pwds'></div></li>
-            </ul>
-            <button>注册</button>
-            </form>
-            </div>
+            
+           
+           
+           
         </div>
 </template>
 <script>
@@ -39,36 +37,79 @@ export default {
             unameI:'',
             pwdI:'',
             opwdI:'',
+            unameF:false,
+            isActive:1,
             unameA:{
                 "nactive":false
             },
+            
             pwdA:{
                 "pactive":false
             }
         }
     },
     methods:{
-        login(){
+        isregister(){
             
+            this.axios.get('http://127.0.0.1:3000/isregister?uname='+this.uname).then(res=>{
+                var result=res.data;
+               
+                if(result.code==1){
+                    this.unameA['nactive']=false;
+                  this.unameF=false;
+                 
+                }else{  
+                
+                    this.unameA['nactive']=true
+                    this.unameF=true;
+                    
+                }
+               this.unameI=result.msg;
+            })
+        },
+        register(){
+           
             if(this.pwd!==this.opwd){
                 this.opwdI='密码不一致';
             }
             if(this.pwd===this.opwd&&this.unameA['nactive']==false&&this.pwdA['pactive']==false){
-                   this.axios.get('http://127.0.0.1:3000/login?uname='+this.uname+'&pwd='+this.pwd).then(res=>{
+               
+                   this.axios.get('http://127.0.0.1:3000/regsiter?uname='+this.uname+'&pwd='+this.pwd).then(res=>{
                        var res=res.data;
                         Toast(res.msg)
+                        
                    })
             }
            
-        }
+        },
+        login(){
+           
+            if(this.pwd&&this.uname){
+                this.axios.get('http://127.0.0.1:3000/login?uname='+this.uname+'&pwd='+this.pwd).then(res=>{
+                     var res=res.data
+                     
+                        Toast(res.msg)
+                    this.$router.push('/two')
+                })
+            }else{
+                 Toast('密码或者用户名不对T_T')
+            }
+        },
+        clickLAG(i){
+            this.isActive=i;
+             this.uname='';
+            this.pwd='';
+            this.opwd='';
+        },
     },
     watch:{
         uname(val,oval){
           
             var ureg=/^([\u4E00-\u9FA5]|[0-9]|[a-z]|[A-Z]){4,12}$/
+            if(this.unameF==false){
              this.unameA['nactive']=false
-             this.unameI='该用户可以用的'
-             
+             this.unameI='papapapa~~~~T_T'
+                }
             if(!ureg.test(val)){
                 
                this.unameA['nactive']=true
@@ -82,7 +123,7 @@ export default {
         pwd(val,oval){
             var ureg=/^([0-9]|[a-z]|[A-Z]|_|\.){6,12}$/
              this.pwdA['pactive']=false
-             this.pwdI='该用户可以用的'
+             this.pwdI='该密码格式正确'
              
             if(!ureg.test(val)){
                
@@ -127,6 +168,9 @@ export default {
 }
 .login-app>div{
     display: none;
+}
+.login-app>div.active{
+    display: block; 
 }
 .login-app>div ul{
     list-style: none;
@@ -173,7 +217,5 @@ export default {
     height: 40px;
     margin-top: 20px;
 }
-.login-app>div.active{
-    display: block; 
-}
+
 </style>

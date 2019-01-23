@@ -22,14 +22,69 @@ CREATE TABLE news(
     content VARCHAR(100000),
     ntime DATETIME,
     lovecount INT
+    
 );
-INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-1',400);
-INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-1',400);
-INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-1',400);
-INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-1',400);
-INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-1',400);
-INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-1',400);
-INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-1',400);
+INSERT INTO news VALUES(null,1,'冰川纪元','http://127.0.0.1:3000/kind_img/onestory.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-1',400);
+INSERT INTO news VALUES(null,1,'冰川纪元','http://127.0.0.1:3000/kind_img/onestory.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-2',400);
+INSERT INTO news VALUES(null,1,'冰川纪元','http://127.0.0.1:3000/kind_img/onestory.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-3',400);
+INSERT INTO news VALUES(null,1,'冰川纪元','http://127.0.0.1:3000/kind_img/onestory.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-4',400);
+INSERT INTO news VALUES(null,1,'冰川纪元','http://127.0.0.1:3000/kind_img/onestory.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-5',400);
+INSERT INTO news VALUES(null,1,'冰川纪元','http://127.0.0.1:3000/kind_img/onestory.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-6',400);
+INSERT INTO news VALUES(null,1,'冰川纪元','http://127.0.0.1:3000/kind_img/onestory.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-7',400);
+
+
+INSERT INTO news VALUES(null,2,'冰川纪元','http://127.0.0.1:3000/kind_img/loveclass.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-1',400);
+INSERT INTO news VALUES(null,2,'冰川纪元','http://127.0.0.1:3000/kind_img/loveclass.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-2',400);
+INSERT INTO news VALUES(null,2,'冰川纪元','http://127.0.0.1:3000/kind_img/loveclass.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-3',400);
+INSERT INTO news VALUES(null,2,'冰川纪元','http://127.0.0.1:3000/kind_img/loveclass.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-4',400);
+INSERT INTO news VALUES(null,2,'冰川纪元','http://127.0.0.1:3000/kind_img/loveclass.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-5',400);
+INSERT INTO news VALUES(null,2,'冰川纪元','http://127.0.0.1:3000/kind_img/loveclass.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-6',400);
+INSERT INTO news VALUES(null,2,'冰川纪元','http://127.0.0.1:3000/kind_img/loveclass.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-7',400);
+
+
+INSERT INTO news VALUES(null,3,'冰川纪元','http://127.0.0.1:3000/kind_img/text.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-1',400);
+INSERT INTO news VALUES(null,3,'冰川纪元','http://127.0.0.1:3000/kind_img/text.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-2',400);
+INSERT INTO news VALUES(null,3,'冰川纪元','http://127.0.0.1:3000/kind_img/text.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-3',400);
+INSERT INTO news VALUES(null,3,'冰川纪元','http://127.0.0.1:3000/kind_img/text.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-4',400);
+INSERT INTO news VALUES(null,3,'冰川纪元','http://127.0.0.1:3000/kind_img/text.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-5',400);
+INSERT INTO news VALUES(null,3,'冰川纪元','http://127.0.0.1:3000/kind_img/text.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-6',400);
+INSERT INTO news VALUES(null,3,'冰川纪元','http://127.0.0.1:3000/kind_img/text.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-7',400);
+
+
+INSERT INTO news VALUES(null,4,'冰川纪元','http://127.0.0.1:3000/kind_img/question.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-1',400);
+INSERT INTO news VALUES(null,4,'冰川纪元','http://127.0.0.1:3000/kind_img/question.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-2',400);
+INSERT INTO news VALUES(null,4,'冰川纪元','http://127.0.0.1:3000/kind_img/question.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-3',400);
+INSERT INTO news VALUES(null,4,'冰川纪元','http://127.0.0.1:3000/kind_img/question.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-4',400);
+INSERT INTO news VALUES(null,4,'冰川纪元','http://127.0.0.1:3000/kind_img/question.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-5',400);
+INSERT INTO news VALUES(null,4,'冰川纪元','http://127.0.0.1:3000/kind_img/question.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-6',400);
+INSERT INTO news VALUES(null,4,'冰川纪元','http://127.0.0.1:3000/kind_img/question.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-7',400);
+
+
+INSERT INTO news VALUES(null,5,'冰川纪元','http://127.0.0.1:3000/kind_img/music.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-1',400);
+INSERT INTO news VALUES(null,5,'冰川纪元','http://127.0.0.1:3000/kind_img/music.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-2',400);
+INSERT INTO news VALUES(null,5,'冰川纪元','http://127.0.0.1:3000/kind_img/music.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-3',400);
+INSERT INTO news VALUES(null,5,'冰川纪元','http://127.0.0.1:3000/kind_img/music.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-4',400);
+INSERT INTO news VALUES(null,5,'冰川纪元','http://127.0.0.1:3000/kind_img/music.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-5',400);
+INSERT INTO news VALUES(null,5,'冰川纪元','http://127.0.0.1:3000/kind_img/music.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-6',400);
+INSERT INTO news VALUES(null,5,'冰川纪元','http://127.0.0.1:3000/kind_img/music.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-7',400);
+
+
+INSERT INTO news VALUES(null,6,'冰川纪元','http://127.0.0.1:3000/kind_img/movie.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-1',400);
+INSERT INTO news VALUES(null,6,'冰川纪元','http://127.0.0.1:3000/kind_img/movie.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-2',400);
+INSERT INTO news VALUES(null,6,'冰川纪元','http://127.0.0.1:3000/kind_img/movie.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-3',400);
+INSERT INTO news VALUES(null,6,'冰川纪元','http://127.0.0.1:3000/kind_img/movie.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-4',400);
+INSERT INTO news VALUES(null,6,'冰川纪元','http://127.0.0.1:3000/kind_img/movie.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-5',400);
+INSERT INTO news VALUES(null,6,'冰川纪元','http://127.0.0.1:3000/kind_img/movie.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-6',400);
+INSERT INTO news VALUES(null,6,'冰川纪元','http://127.0.0.1:3000/kind_img/movie.jpg','xiaobu','保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.','2018-1-7',400);
+-- 
+-- INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-2',400);
+-- INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-3',400);
+-- INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-4',400);
+-- INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-5',400);
+-- INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-6',400);
+-- INSERT INTO news VALUES(null,1,'喀喀喀卡卡卡卡卡','http://123456789qwerty.png','xiaobu','qwertyuiiuytrewqasertyjkerty','2018-1-7',400);
+
+
 
 CREATE TABLE comm(
     mid INT PRIMARY KEY AUTO_INCREMENT,

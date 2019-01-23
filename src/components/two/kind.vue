@@ -21,14 +21,17 @@
 <script>
 export default {
     data(){
-        return{ //1.onestory 2.恋爱课 3.连载 4.问答 5.音乐 6.影视
-            list:[  {kind_id:1,kind_name:'ONE STORY',title:'冰川纪元',img:'../../../static/kind_img/onestory.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:511},
-                    {kind_id:5,kind_name:'音乐',title:'冰川纪元',img:'../../../static/kind_img/music.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:515},
-                    {kind_id:4,kind_name:'问答',title:'冰川纪元',img:'../../../static/kind_img/question.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:514,music:'https://music.163.com/#/song?id=433223017'},
-                    {kind_id:6,kind_name:'影视',title:'冰川纪元',img:'../../../static/kind_img/movie.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:516},
-                    {kind_id:2,kind_name:'恋爱课',title:'冰川纪元',img:'../../../static/kind_img/loveclass.jpg',author:'xiaobu',content:'123456789',data:'2018',loveCount:512},
-                    {kind_id:3,kind_name:'连载',title:'冰川纪元',img:'../../../static/kind_img/text.jpg',author:'xiaobu',content:'123456789',data:'2018',loveCount:513}
-                ]
+        return{ 
+            
+            list:[]
+            //1.onestory 2.恋爱课 3.连载 4.问答 5.音乐 6.影视
+            // list:[  {kind_id:1,kind_name:'ONE STORY',title:'冰川纪元',img:'http://127.0.0.1:3000/kind_img/onestory.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:511},
+            //         {kind_id:5,kind_name:'音乐',title:'冰川纪元',img:'http://127.0.0.1:3000/kind_img/music.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:515},
+            //         {kind_id:4,kind_name:'问答',title:'冰川纪元',img:'http://127.0.0.1:3000/kind_img/question.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:514,music:'https://music.163.com/#/song?id=433223017'},
+            //         {kind_id:6,kind_name:'影视',title:'冰川纪元',img:'http://127.0.0.1:3000/kind_img/movie.jpg',author:'xiaobu',content:'保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们,保护我所爱的一切，亲近他们，善待他们，最后珍惜他们.',data:'2018',loveCount:516},
+            //         {kind_id:2,kind_name:'恋爱课',title:'冰川纪元',img:'http://127.0.0.1:3000/kind_img/loveclass.jpg',author:'xiaobu',content:'123456789',data:'2018',loveCount:512},
+            //         {kind_id:3,kind_name:'连载',title:'冰川纪元',img:'http://127.0.0.1:3000/kind_img/text.jpg',author:'xiaobu',content:'123456789',data:'2018',loveCount:513}
+            //     ]
                 // 
                 // 
                 //  
@@ -60,6 +63,11 @@ export default {
        
        
         
+    },
+    create(){
+        this.axion.get('http://127.0.0.1:3000/getnews').then(res=>{
+            console.log(res);
+        })
     }
 }
 </script>
