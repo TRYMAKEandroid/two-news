@@ -1,6 +1,6 @@
 <template>
         <div class='nav_tab-app'>
-            <div><img src="../../../static/nav_img/pic.png" alt=""><span>文章</span>
+            <div><img src="../../../static/nav_img/pic.png" alt=""><span>图文</span>
             </div>
             <div><img src="../../../static/nav_img/question.png" alt=""><span>问答</span></div>
             <div class='double_img'><img src="../../../static/nav_img/read.png" alt=""><span>阅读</span></div>
@@ -8,7 +8,7 @@
             <div><img src="../../../static/nav_img/movie.png" alt=""><span>影视</span></div>
             <div><img src="../../../static/nav_img/music.png" alt=""><span>音乐</span></div>
             <div><img src="../../../static/nav_img/station.png" alt=""><span>电台</span></div>
-                
+             
                
                 
                 

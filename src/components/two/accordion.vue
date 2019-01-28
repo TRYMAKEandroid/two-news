@@ -9,17 +9,17 @@
                 <div class='mouth'>--1月--</div>
             <ul>
                 <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                 <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                  <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                   <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                    <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                     <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
                 <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                 <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                  <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                   <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                    <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
-                     <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
+                <li><div>2018-1-1</div><img src="../../../static/kind_img/movie.jpg" alt=""></li>
             </ul>
             </div>
             

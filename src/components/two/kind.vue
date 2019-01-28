@@ -1,17 +1,17 @@
 <template>
     <div class='kind-app'>
-        <div class='kindfor' v-for='item in list' :key="item.kind_id">
-        <div class='kind-name'>-{{item.kind_name}}-</div>
+        <div class='kindfor' v-for='item in list' :key="item.nid">
+        <div class='kind-name'>-{{item.kname}}-</div>
         <div class='title'>{{item.title}}</div>
-        <div class='author' v-if="item.kind_id!=4"><span>文</span>/<span>{{item.author}}</span></div>
+        <div class='author' v-if="item.kid!=4"><span>文</span>/<span>{{item.author}}</span></div>
         <div class='author' v-else><span>{{item.author}}</span></div>
-         <div class='kind-img2' v-if="item.kind_id==5" @load="getmusic"><canvas id='m1' width="150" height="150"></canvas></div>
-        <div class='kind-img3' v-else-if="item.kind_id==6"><img :src="item.img" alt=""></div>
-       <div class='kind-img' v-else><img :src="item.img" alt=""></div>
+         <div class='kind-img2' v-if="item.kid==5" @load="getmusic"><canvas id='m1' width="150" height="150"></canvas></div>
+        <div class='kind-img3' v-else-if="item.kid==6"><img :src="item.img_url" alt=""></div>
+       <div class='kind-img' v-else><img :src="item.img_url" alt=""></div>
         <div class='content'>{{item.content}} <p>-&nbsp;-《{{item.title}}》</p> </div>
-        <div class='bnav'><div class='left-time'>{{item.data}}</div>
+        <div class='bnav'><div class='left-time'>{{item.ntime}}</div>
         <ul class='right-nav'>
-            <li><img src="../../../static/img/theme-img/L1.png" alt=""><sup>{{item.loveCount}}</sup></li>
+            <li><img src="../../../static/img/theme-img/L1.png" alt=""><sup>{{item.lovecount}}</sup></li>
             <li><img src="../../../static/img/theme-img/F1.png" alt=""></li>
         </ul>
         </div>
@@ -64,9 +64,18 @@ export default {
        
         
     },
-    create(){
-        this.axion.get('http://127.0.0.1:3000/getnews').then(res=>{
-            console.log(res);
+    created(){
+        var time=new Date();
+        var mouth=time.getMonth()+1;
+        var day=time.getDate();
+        var year=time.getFullYear();
+       
+
+        var ntime=`${year}-${mouth}-${day}`;
+        this.axios.get('http://127.0.0.1:3000/getnews?ntime='+ntime).then(res=>{
+                    var res=res.data.data;
+                    this.list=res;
+                    console.log(this.list)
         })
     }
 }

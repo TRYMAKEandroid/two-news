@@ -11,12 +11,21 @@
             </ul>
         </div>
        
-        <div class='search_item'><img src="../../../static/search_img/search.png" alt=""></div>
+        <div class='search_item' @click='rightMoveSearch'><img src="../../../static/search_img/search.png" alt=""></div>
     </div>
 </template>
 <script>
 export default {
-    
+    data(){
+        return{
+            
+        }
+    },
+    methods:{
+        rightMoveSearch(){
+            
+        }
+    }
 }
 </script>
 <style scoped>

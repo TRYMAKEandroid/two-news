@@ -53,12 +53,86 @@ app.use(cors({
 //    })
     
 // })
-app.get('/getnews',(req,res)=>{
-    var ntime=new Date().toLocaleTimeString();
-    console.log()
-    pool.query('select * from news where ntime=?',[ntime],(err,result)=>{
+// app.get('/getYears',(req,res)=>{
+//     pool.query('select * from dateY',(err,result)=>{
+//         if(err) throw err;
+//         if(result.length>0){
+//         res.send(result)}else{
+//             res.send('拿不到了');
+//         }
+//     })
+// })
+// app.get('/getMonths',(req,res)=>{
+//     var yid=req.query.yid;
+//     pool.query('select * from dateM where yid=?',[yid],(err,result)=>{
+//         if(err) throw err;
+//         if(result.length>0){
+//             res.send(result)
+           
+//         }else{
+//             res.send('拿不到了')
+//             console.log(result)
+//         }
+//     })
+// })
+app.get('/getkinds',(req,res)=>{
+    pool.query('select * from kind',(err,result)=>{
+        if(err) throw err
+        if(result.length>0){
+            res.send(result)
+        }else{
+            res.send('拿不到了');
+        }
+    })
+})
+app.get('/getnewslist',(req,res)=>{
+    var start = new Date(req.query.start);
+    var endsub= new Date(req.query.endsub);
+    var kid=req.query.kid;
+    pool.query('select * from news where ntime >=? and ntime<? and kid=?',[start,endsub,kid],(err,result)=>{
+        if(err) throw err
+        if(result.length>0){
+            res.send(result);
+        }else{
+            res.send('拿不到了');
+        }
+    })
+})
+app.get('/getMonth',(req,res)=>{
+    var start=new Date(req.query.start);
+    
+    
+    var end = new Date(req.query.end);
+    pool.query('select distinct ntime from news where ntime between ? and ? group by ntime order by ntime desc',[start,end],(err,result)=>{
         if(err) throw err;
+        if(result.length>0){
+            res.send(result);
+        }else{
+            res.send('拿不到了');
+            console.log(result)
+        }
+    })
+})
+app.get('/getYears',(req,res)=>{
+    pool.query('select distinct ntime from news ntime group by ntime order by ntime desc',(err,result)=>{
+        if(err) throw err;
+        if(result.length>0){
         res.send(result);
+
+    }
+    })
+})
+app.get('/getnews',(req,res)=>{
+    var ntime=req.query.ntime;
+    ntime=new Date(ntime);  
+    var obj={}; 
+    pool.query('select n.*,k.kname from news n,kind k where n.kid=k.kid and n.ntime=?',[ntime],(err,result)=>{
+        if(err) throw err;
+        if(result==0){
+            obj={code:-1,data:'error'}
+        }else{
+            obj={code:1,data:result}
+        res.send(obj);}
     })
 })
 app.get('/isregister',(req,res)=>{
