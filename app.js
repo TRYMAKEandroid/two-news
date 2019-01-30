@@ -100,10 +100,9 @@ app.get('/getnewslist',(req,res)=>{
 })
 app.get('/getMonth',(req,res)=>{
     var start=new Date(req.query.start);
-    
-    
     var end = new Date(req.query.end);
-    pool.query('select distinct ntime from news where ntime between ? and ? group by ntime order by ntime desc',[start,end],(err,result)=>{
+    var kid=req.query.kid;
+    pool.query('select distinct ntime from news where ntime between ? and ? and kid=? group by ntime order by ntime desc',[start,end,kid],(err,result)=>{
         if(err) throw err;
         if(result.length>0){
             res.send(result);
@@ -114,7 +113,8 @@ app.get('/getMonth',(req,res)=>{
     })
 })
 app.get('/getYears',(req,res)=>{
-    pool.query('select distinct ntime from news ntime group by ntime order by ntime desc',(err,result)=>{
+    var kid=req.query.kid;
+    pool.query('select distinct ntime from news where kid=? group by ntime order by ntime desc',[kid],(err,result)=>{
         if(err) throw err;
         if(result.length>0){
         res.send(result);

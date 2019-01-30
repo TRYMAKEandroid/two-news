@@ -1,8 +1,8 @@
 <template>
     <div class='newslist-app'>
-            <my-accordion-top @putkid='putkid'></my-accordion-top>
-            <my-accordion-date @putdate='putdate'></my-accordion-date>
-            <my-newslists :yname='yname' :mname='mname' :kid='kid'></my-newslists>
+            <my-accordion-top @putkid='putkid' :yname='yname' :mname='mname' ></my-accordion-top> <!--头部的子组件-->
+            <my-accordion-date @putdate='putdate' :kid='kid' ></my-accordion-date><!--调控时间查询组件-->
+            <my-newslists :yname='yname' :mname='mname' :kid='kid'></my-newslists><!--新闻列表组件-->
             <!-- <div class='accordion_date'>2019年01月</div> -->
         </div>    
 </template>
@@ -13,29 +13,32 @@ import newslists from '@/components/newslist/newslists.vue'
 export default {
     data(){
         return{
-            index:0,
-            ischecked:null,
-          yname:[],
-          mname:[],
-          kid:null
+            index:0, //初始化为第一个下标的种类 //需要修改
+            ischecked:null, //作为判断是否被选中的点击变量
+          yname:null,   //年份的名字
+          mname:null,   //月份的名字
+          kid:1,        //初始化种类的下标 //需要修改
+          
         }
     },
     methods:{
-        ischeck(index){
-            if(this.ischecked==index){
-            this.ischecked=null;
-            }else{
-            this.ischecked=index;}
+        // ischeck(index){         //点击打开列表list
+        //     if(this.ischecked==index){
+        //     this.ischecked=null;
+        //     }else{
+        //     this.ischecked=index;}
           
-        },
-        putdate(yname,mname){
+        // },
+        putdate(yname,mname){      //从调控时间查询组件过来的参数yname,mname
            this.yname=yname
            this.mname=mname
             
         },
-        putkid(kid){
+        putkid(kid){                //从头部的组件过来的参数kid
             this.kid=kid
-        }
+            // console.log(this.kid)
+        },
+        
     },
     components:{
         'my-accordion-top':accordion_top,
