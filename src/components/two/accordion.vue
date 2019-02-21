@@ -1,7 +1,7 @@
 <template>
-        <div class='accordion-app'>
+        <div class='accordion-app' :class='{"active":index==isindex}'>
             <div class='accordion-header'>
-                <div class='left-accordion' @click="acc"><span>{{day}}</span><span>{{mouth_en}}.</span><span>{{year}}</span> <span class='arrow'>◢</span></div>
+                <div class='left-accordion' @click="acc(index)"><span>{{day}}</span><span>{{mouth_en}}.</span><span>{{year}}</span> <span class='arrow'>◢</span></div>
                 <div class='right-info'><span>{{orientation}}</span>·<span>{{floor}}</span><span>{{temp}}</span>℃</div>
             </div>
             <div class='accordion-content'>
@@ -35,31 +35,41 @@ export default {
             orientation:'地球',
             floor:'对流层',
             temp:-275,
-            flag:0
+            flag:0,
+            index:1,
+            isindex:null
         }  
     },methods:{
-        acc(e){
-            var accordion=document.querySelector('.accordion-app');
-            var accordion_content=document.querySelector('.accordion-app .accordion-content');
-            if(this.flag==0){
-                accordion.classList.add('active');
-                accordion_content.style.top=(e.pageY-45)+'px'
-                accordion_content.scrollTo(0,8);
-                this.flag=1;
-                this.$emit('changeBodyC',1);
+        acc(i){
+            if(this.isindex==null){
+            this.isindex=i;
+            this.$emit('changeBodyC',1);
             }else{
-                accordion.classList.remove('active');
-                this.flag=0;
+                this.isindex=null;
+            }
+        }
+        // acc(e){
+        //     var accordion=document.querySelector('.accordion-app');
+        //     var accordion_content=document.querySelector('.accordion-app .accordion-content');
+        //     if(this.flag==0){
+        //         accordion.classList.add('active');
+        //         accordion_content.style.top=(e.pageY-45)+'px'
+        //         accordion_content.scrollTo(0,8);
+        //         this.flag=1;
+        //         this.$emit('changeBodyC',1);
+        //     }else{
+        //         accordion.classList.remove('active');
+        //         this.flag=0;
 
                 
-               this.$emit('changeBodyC',0);
+        //        this.$emit('changeBodyC',0);
                
-            }
+        //     }
        
-        },
-         getp(e){
-            console.log(e)
-        }
+        // },
+        //  getp(e){
+        //     console.log(e)
+        // }
     }
 }
 </script>

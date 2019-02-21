@@ -55,14 +55,15 @@ export default {
           })
        },
        kid(){
-           if(this.yname2==this.yname||this.mname2==this.mname){
-          var start=`${this.yname}-${this.mname}-1`;
-          var endsub=`${this.yname}-${this.mname+1}-1`;
-          this.axios.get('http://127.0.0.1:3000/getnewslist?start='+start+'&endsub='+endsub+'&kid='+this.kid).then((res)=>{
-              var res=res.data;
-              this.listd=res;
-            })
-          }
+           this.listd=[];
+        //    if(this.yname2==this.yname||this.mname2==this.mname){
+        //   var start=`${this.yname}-${this.mname}-1`;
+        //   var endsub=`${this.yname}-${this.mname+1}-1`;
+        //   this.axios.get('http://127.0.0.1:3000/getnewslist?start='+start+'&endsub='+endsub+'&kid='+this.kid).then((res)=>{
+        //       var res=res.data;
+        //       this.listd=res;
+        //     })
+        //   }
        }
       
     }

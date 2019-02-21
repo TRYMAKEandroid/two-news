@@ -9,7 +9,7 @@ app.listen(3000,(err)=>{
 
 app.use(express.static('static'));
 app.use(cors({
-    origin:['http://localhost:8080','http://127.0.0.1:8080'],
+    origin:['http://localhost:8080','http://127.0.0.1:8080','http://localhost:5500','http://127.0.0.1:5500'],
     credentials:true
 }))
 // app.get('/regsiter',(req,res)=>{
@@ -75,6 +75,16 @@ app.use(cors({
 //         }
 //     })
 // })
+app.get('/getimg',(req,res)=>{
+    pool.query('select * from news',(err,result)=>{
+        if(err) throw err;
+        var arr=[];
+       for(let i=0;i<result.length;i++){
+           arr.push(result[i].img_url)
+       }
+       res.send(arr);
+    })
+})
 app.get('/getkinds',(req,res)=>{
     pool.query('select * from kind',(err,result)=>{
         if(err) throw err

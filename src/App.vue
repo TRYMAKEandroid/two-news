@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div id="app" class='active'>
+    <router-view @changeBodyC='changeBodyC'/>
     <mt-tabbar v-model='selected' fixed>
         <mt-tab-item id='/two'>
           <img src="@/assets/tabbar-icon/T1.png" alt="" slot="icon" v-show='T1_icon'>
@@ -31,11 +31,27 @@ export default {
       W2_icon:false,
       O1_icon:true,
       O2_icon:false,
-     
+      index:1,
+      isindex:null
+    
+    
+    
+       
+           
+       
+    
       
     }
   },
   methods:{
+    changeBodyC(i){
+           console.log(i)
+          if(this.isindex==null){
+              this.isindex=i;
+          }else{
+              this.isindex=null;
+          }
+        },
     getbody(){
      return document.body;
     }
@@ -78,16 +94,21 @@ export default {
 </script>
 
 <style>
-body.active{
+body{
   overflow: hidden;
 }
-#app {
+#app{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: fixed;
+  height: 100%;
   
+}
+#app.active{
+  overflow: hidden;
 }
 #app .mint-tabbar{
   /* position: ;
